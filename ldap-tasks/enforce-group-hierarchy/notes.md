@@ -7,17 +7,17 @@ tree of groups. Then, it propagates users down the tree.
 
 So, if there is a group structure like this
 
-== ou=default
-   |
-   +=== cn=netAdmins (group)
-        |
-        +=== ou=bobWorkstation
-        |    |
-        |    +=== cn=bobAdmins (group, supergroup=netAdmins)
-        |
-        +=== ou=sandraServer
-             |
-             +=== cn=sandraAdmins (group, supergroup=netAdmins)
+    == ou=default
+       |
+       +=== cn=netAdmins (group)
+            |
+            +=== ou=bobWorkstation
+            |    |
+            |    +=== cn=bobAdmins (group, supergroup=netAdmins)
+            |
+            +=== ou=sandraServer
+                 |
+                 +=== cn=sandraAdmins (group, supergroup=netAdmins)
 
 Then this script will ensure that any users that are members of `netAdmins` are
 also members of `bobAdmins` and `sandraAdmins` - but *not* the other way around!
