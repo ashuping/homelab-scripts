@@ -1,0 +1,6 @@
+This file should be owned by user root and group sshd.
+
+It should be mode 0750 (i.e., root can read/write/execute, the sshd group can
+read/execute but not write, and other users can't access at all).
+
+This is important for preventing ldap_machine_passwd from being leaked.
